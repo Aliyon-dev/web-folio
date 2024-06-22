@@ -476,7 +476,7 @@ var portfolioItemClick = function() {
 			$('#portfolio-single-holder > div').remove();
 		} 
 
-		TweenMax.to('.loader-portfolio-wrap', 1, { top: '-50px', autoAlpha: 1, display: 'block', ease: Power4.easeOut });
+		TweenMax.to('.loader-portfolio-wrap', 1, { top: '-50px', autoAlpha: 0, display: 'block', ease: Power4.easeOut });
 
 		setTimeout(function() {
 			$('html, body').animate({
