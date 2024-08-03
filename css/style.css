@@ -1149,6 +1149,8 @@ figure.dotted-bg {
       border-right: 1px solid #efefef; }
 
 #about-section {
+  font-weight: 800;
+  
   margin-top: 7rem; }
   #about-section .container {
     background: #418AF1;
