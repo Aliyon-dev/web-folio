@@ -7,8 +7,8 @@
   <meta name="author" content="Aliyon Tembo">
   <link rel="shortcut icon" href="favicon.png">
 
-  <meta name="description" content="Vote Aliyon Tembo for ICTAZ-CBU Projects Coordinator" />
-  <meta name="keywords" content="Aliyon Tembo, ICTAZ-CBU, Projects Coordinator, Election" />
+  <meta name="description" content="Aliyon Tembo for ICTAZ-CBU Projects Coordinator" />
+  <meta name="keywords" content="ICTAZ, CBU, Projects Coordinator, Aliyon Tembo" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,196 +23,346 @@
   <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Vote Aliyon Tembo for ICTAZ-CBU Projects Coordinator</title>
+  <title>Aliyon Tembo for Projects Coordinator</title>
   
   <style>
-    :root {
-      --primary-color: #800080; /* Purple color scheme */
-    }
+    /* Custom styles for the campaign website */
     body {
-      background-color: #f8f9fa;
+      font-family: 'Montserrat', sans-serif;
+      color: #000;
     }
-    .bg-primary {
-      background-color: var(--primary-color) !important;
+    .bg-purple {
+      background-color: #800080;
     }
-    .text-primary {
-      color: var(--primary-color) !important;
+    .text-purple {
+      color: #800080;
     }
-    .btn-primary {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
+    .btn-purple {
+      background-color: #800080;
+      color: white;
     }
-    .btn-primary:hover {
+    .btn-purple:hover {
       background-color: #660066;
-      border-color: #660066;
+      color: white;
     }
+    .vision-item, .project-item {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+    .vision-item:hover, .project-item:hover {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transform: translateY(-5px);
+    }
+    .vision-item img, .project-item img {
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .vision-item h3, .project-item h3 {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+    .vision-item p, .project-item p {
+      font-size: 0.9rem;
+    }
+
+
+    #gallery-section img {
+  transition: transform 0.3s ease;
+}
+
+#gallery-section img:hover {
+  transform: scale(1.05);
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.modal-body {
+  padding: 0;
+}
   </style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
 
-  <div class="site-wrap">
+  <nav class="site-nav dark mb-5 site-navbar-target">
+    <div class="container">
+      <div class="site-navigation">
+        <a href="#home-section" class="logo m-0">Aliyon Tembo<span class="text-purple">.</span></a>
 
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close">
-          <span class="icofont-close js-menu-toggle"></span>
+        <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right">
+          <li><a href="#home-section" class="nav-link active">Home</a></li>
+          <li><a href="#about-section">About</a></li>
+          <li><a href="#vision-section">Vision</a></li>
+          <li><a href="#projects-section">Experience</a></li>
+          <li><a href="#get-involved-section">Get Involved</a></li>
+          <li><a href="#contact-section">Contact</a></li>
+        </ul>
+
+        <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block" data-toggle="collapse" data-target="#main-navbar">
+          <span></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="untree_co-section" id="home-section">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="mb-4"  style="color:#000; font-weight: 800;" data-aos="fade-up" data-aos-delay="0">Vote Aliyon Tembo for Projects Coordinator</h1>
+          <p class="lead mb-5" style="color: #333" data-aos="fade-up" data-aos-delay="100">"For an innovative ICTAZ-CBU Chapter: integrating design, driving projects, fostering skills, and embracing diversity"</p>
+          
+          <div id="countdown" class="row mb-5">
+            <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="card bg-purple text-white">
+                <div class="card-body">
+                  <span id="days" class="h1"></span>
+                  <p class="mb-0">Days</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="card bg-purple text-white">
+                <div class="card-body">
+                  <span id="hours" class="h1"></span>
+                  <p class="mb-0">Hours</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="card bg-purple text-white">
+                <div class="card-body">
+                  <span id="minutes" class="h1"></span>
+                  <p class="mb-0">Minutes</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+              <div class="card bg-purple text-white">
+                <div class="card-body">
+                  <span id="seconds" class="h1"></span>
+                  <p class="mb-0">Seconds</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img src="images/campaign.jpg" alt="Aliyon Tembo" class="img-fluid" data-aos="fade-up" data-aos-delay="600" style="max-width: 400px;">
         </div>
       </div>
-      <div class="site-mobile-menu-body"></div>
     </div>
-  
-    <nav class="site-nav dark mb-5 site-navbar-target">
-      <div class="container">
-        <div class="site-navigation">
-          <a href="#home" class="logo m-0">Aliyon Tembo<span class="text-primary">.</span></a>
+  </div>
 
-          <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About Aliyon</a></li>
-            <li><a href="#vision" class="nav-link">Vision & Goals</a></li>
-            <li><a href="#projects" class="nav-link">Projects & Experience</a></li>
-            <li><a href="#get-involved" class="nav-link">Get Involved</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
+  <div class="untree_co-section" id="abouts-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title mb-3" style="color: #000; font-weight: 700; data-aos="fade-up" data-aos-delay="0">About Aliyon</h2>
+        </div>
+        <div class="col-lg-8 mx-auto text-center">
+          <p data-aos="fade-up" data-aos-delay="100">I'm a second-year Computer Engineering student with a passion for technology and innovation. As a UI/UX Designer and Fullstack Developer, I bring a unique blend of technical skills and creative problem-solving to the table. Currently, I serve as a Product Designer at TechIQ, where I've had the opportunity to lead impactful projects and drive technological advancements.</p>
+        </div>
+      </div>
 
-          <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block" data-toggle="collapse" data-target="#main-navbar">
-            <span></span>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" data-toggle="modal" data-target="#imageModal" data-image="images/img_1 (1).jpg">
+            <img src="images/img_1 (1).jpg" alt="Gallery Image 1" class="img-fluid rounded">
           </a>
         </div>
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" data-toggle="modal" data-target="#imageModal" data-image="images/img_1 (2).jpg">
+            <img src="images/img_1 (2).jpg" alt="Gallery Image 2" class="img-fluid rounded">
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" data-toggle="modal" data-target="#imageModal" data-image="images/img_3 (2).jpg">
+            <img src="images/img_3 (2).jpg" alt="Gallery Image 3" class="img-fluid rounded">
+          </a>
+        </div>
+        <!-- Add more gallery items as needed -->
       </div>
-    </nav>
+    </div>
+  </div>
+  
+  <!-- Modal for larger image view -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img src="" class="img-fluid" id="modalImage">
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="untree_co-section" id="home">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-8">
-            <h1 class="mb-4" data-aos="fade-up" data-aos-delay="0">Vote Aliyon Tembo for Projects Coordinator</h1>
-            <p class="lead mb-5" data-aos="fade-up" data-aos-delay="100">Innovate. Collaborate. Elevate.</p>
-            
-            <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
-              <img src="images/campaign.jpg" alt="Aliyon Tembo" class="img-fluid" style="max-width: 500px;">
+  <div class="untree_co-section" id="vision-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title mb-5" style="color: #000; font-weight: 700;" data-aos="fade-up" data-aos-delay="0">Vision & Goals</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="vision-item text-center">
+            <img src="images/wayfarer.jpg" alt="Impactful Projects" class="img-fluid mb-3">
+            <h3>Impactful Projects</h3>
+            <p>Launch projects aligned with industry needs</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="vision-item text-center">
+            <img src="images/2.jpg" alt="Foster Innovation" class="img-fluid mb-3">
+            <h3>Foster Innovation</h3>
+            <p>Promote creative problem-solving initiatives</p>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="vision-item text-center">
+            <img src="images/7.jpeg" alt="Strategic Partnerships" class="img-fluid mb-3">
+            <h3>Strategic Partnerships</h3>
+            <p>Build connections with diverse organizations</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="vision-item text-center">
+            <img src="images/5.jpg" alt="Skill Development" class="img-fluid mb-3">
+            <h3>Skill Development</h3>
+            <p>Promote inclusive learning through workshops and mentorship</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="vision-item text-center">
+            <img src="images/1.jpg" alt="Diversity and Inclusion" class="img-fluid mb-3">
+            <h3>Diversity and Inclusion</h3>
+            <p>Champion diversity in all aspects of our work</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="untree_co-section bg-light" id="design-club-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title mb-5" style="color:#000; font-weight: 700;" data-aos="fade-up" data-aos-delay="0">Design Club Initiative</h2>
+        </div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <img src="images/design.jpeg" alt="Design Club Illustration" class="img-fluid rounded">
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="mb-4" style="color: #6666;">Bridging Design and Technology</h3>
+          <p>As part of our vision to foster innovation and create well-rounded professionals, we plan to launch a dedicated design club. This initiative aims to:</p>
+          <ul>
+            <li>Provide a platform for students to explore the intersection of design and technology</li>
+            <li>Organize workshops and seminars on UI/UX design, graphic design, and design thinking</li>
+            <li>Collaborate with tech projects to ensure user-centric and aesthetically pleasing outcomes</li>
+            <li>Host design challenges and hackathons to solve real-world problems</li>
+            <li>Invite industry experts to share insights on the importance of design in tech</li>
+          </ul>
+          <p>By bridging the gap between design and technology, we aim to produce innovators who can create not just functional, but also intuitive and beautiful solutions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="untree_co-section" id="projects-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title mb-5" data-aos="fade-up" data-aos-delay="0">Projects & Experience</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-item">
+            <img src="images/Nike.png" alt="NIKE Dropshipping Project" class="img-fluid mb-3">
+            <h3>NIKE Dropshipping Project</h3>
+            <p>Led the development of an automation bot to help streamline the Dropshipping process at Nike.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-item">
+            <img src="images/event.jpeg" alt="TechIQ Product Design" class="img-fluid mb-3">
+            <h3>TechIQ Product Design</h3>
+            <p>Currently serving as a Product Designer at TechIQ, where I've contributed to multiple innovative projects and honed my leadership skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="untree_co-section bg-light" id="get-involved-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">Get Involved</h2>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <p data-aos="fade-up" data-aos-delay="100">Join our campaign and help shape the future of ICTAZ-CBU! We're looking for passionate individuals to support our vision.</p>
+          <form class="volunteer-form" data-aos="fade-up" data-aos-delay="200">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Enter your email">
+              <button type="submit" class="btn btn-purple mt-3">Join the Campaign</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="untree_co-section" id="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">Contact</h2>
+        </div>
+        <div class="col-lg-8 mx-auto">
+          <form action="https://formspree.io/f/mdkngjne" method="POST" class="contact-form" data-aos="fade-up" data-aos-delay="100">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="fname">First name</label>
+                  <input type="text" class="form-control" id="fname" name="First name">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label class="text-black" for="lname">Last name</label>
+                  <input type="text" class="form-control" id="lname" name="Last name">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="text-black" for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="email">
             </div>
 
-            <div id="countdown" class="row mb-5">
-              <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card">
-                  <div class="card-body">
-                    <span id="days" class="h1"></span>
-                    <p class="mb-0">Days</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="card">
-                  <div class="card-body">
-                    <span id="hours" class="h1"></span>
-                    <p class="mb-0">Hours</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="card">
-                  <div class="card-body">
-                    <span id="minutes" class="h1"></span>
-                    <p class="mb-0">Minutes</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="500">
-                <div class="card">
-                  <div class="card-body">
-                    <span id="seconds" class="h1"></span>
-                    <p class="mb-0">Seconds</p>
-                  </div>
-                </div>
-              </div>
+            <div class="form-group">
+              <label class="text-black" for="message">Message</label>
+              <textarea name="" class="form-control" id="message" name="message" cols="30" rows="5"></textarea>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="untree_co-section bg-light" id="about">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-8">
-            <h2 class="mb-4" data-aos="fade-up" data-aos-delay="0">About Aliyon</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Aliyon Tembo is a second-year Computer Engineering student with a passion for technology and innovation. As a UI/UX Designer and Fullstack Developer, Aliyon brings a wealth of experience to the role of Projects Coordinator. Currently serving as a Product Designer at TechIQ, Aliyon is well-equipped to lead ICTAZ-CBU into a new era of technological advancement.</p>
-          </div>
+            <button type="submit" class="btn btn-purple">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
-
-    <div class="untree_co-section" id="vision">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-8">
-            <h2 class="mb-4" data-aos="fade-up" data-aos-delay="0">Vision & Goals</h2>
-            <ul class="list-unstyled" data-aos="fade-up" data-aos-delay="100">
-              <li>Launching impactful projects</li>
-              <li>Fostering innovation</li>
-              <li>Building strategic partnerships</li>
-              <li>Promoting inclusive skill development</li>
-              <li>Championing diversity and inclusion</li>
-            </ul>
-            <p data-aos="fade-up" data-aos-delay="200">Our ultimate goal is to position ICTAZ-CBU as a leader in technology and innovation, setting new standards for excellence in the field.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="untree_co-section bg-light" id="projects">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-8">
-            <h2 class="mb-4" data-aos="fade-up" data-aos-delay="0">Projects & Experience</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Aliyon has a proven track record of leading successful projects, including the NIKE Dropshipping project in Sweden. This international experience demonstrates Aliyon's ability to manage complex initiatives and collaborate across borders.</p>
-            <!-- Add more projects and experiences here -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="untree_co-section" id="get-involved">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-8">
-            <h2 class="mb-4" data-aos="fade-up" data-aos-delay="0">Get Involved</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Join our campaign and help shape the future of ICTAZ-CBU! Sign up to volunteer or support our initiatives.</p>
-            <form class="subscribe-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Enter your email">
-                <button type="submit" class="btn btn-primary">Join the Team</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="untree_co-section bg-light" id="contact">
-      <div class="container">
-        <div class="row justify-content-center text-center mb-5">
-          <div class="col-lg-8">
-            <h2 class="mb-4" data-aos="fade-up" data-aos-delay="0">Contact Us</h2>
-            <p data-aos="fade-up" data-aos-delay="100">Have questions or want to learn more? Get in touch with us!</p>
-            <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
     <div class="site-footer">
       <div class="container">
@@ -268,6 +418,19 @@
         document.getElementById("countdown").innerHTML = "ELECTION DAY";
       }
     }, 1000);
+
+
+
+
+  $(document).ready(function() {
+  $('#imageModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var imageUrl = button.data('image');
+    var modal = $(this);
+    modal.find('#modalImage').attr('src', imageUrl);
+  });
+});
+
   </script>
 
 </body>
