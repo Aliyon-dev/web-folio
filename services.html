@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Mono&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+  <!-- Include your existing head content here -->
+  <title>Request Services - Aliyon's Portfolio</title>
+  <style>
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .service-checkbox {
+      display: none;
+    }
+    .service-label {
+      display: block;
+      padding: 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .service-checkbox:checked + .service-label {
+      border-color: #0389ff;
+      background-color: rgba(3, 137, 255, 0.1);
+    }
+    .form-section {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .btn-submit {
+      background-color: #0389ff;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 2rem;
+      transition: all 0.3s ease;
+    }
+    .btn-submit:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="100">
+
+    <div class="lines-wrap">
+        <div class="lines-inner">
+          <div class="lines"></div>
+        </div>
+      </div>
+      <!-- END lines -->
+    
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close">
+            <span class="icofont-close js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+
+      <nav class="site-nav dark mb-5 site-navbar-target">
+        <div class="container">
+          <div class="site-navigation">
+            <a href="index.html" class="logo m-0">Aliyon<span class="text-primary">.</span></a>
+    
+            <ul class="js-clone-nav d-none d-lg-inline-none site-menu float-right site-nav-wrap">
+              <li><a href="#home-section" class="nav-link active">Home</a></li>
+              <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
+              <li class="has-children">
+                <a href="#about-section" class="nav-link">About</a>
+                <ul class="dropdown">
+                  <li><a href="elements.html" class="nav-link">Elements</a></li>
+                  <li class="has-children">
+                    <a href="#">Menu Two</a>
+                    <ul class="dropdown">
+                      <li><a href="#" class="nav-link">Sub Menu One</a></li>
+                      <li><a href="#" class="nav-link">Sub Menu Two</a></li>
+                      <li><a href="#" class="nav-link">Sub Menu Three</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#" class="nav-link">Menu Three</a></li>
+                </ul>
+              </li>
+              <li><a href="#services-section" class="nav-link">Services</a></li>
+    
+              <li><a href="#contact-section" class="nav-link">Contact us</a></li>
+            </ul>
+    
+            <a href="#" class="burger ml-auto float-right site-menu-toggle js-menu-toggle d-inline-block d-lg-inline-block" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+    
+          </div>
+        </div>
+      </nav>
+
+  <!-- Include your existing navigation here -->
+
+  <div class="untree_co-section" id="services-request">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-7 text-center mx-auto">
+          <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Request Services</strong></h2>
+          <p class="gsap-reveal-hero">Select the services you need and provide some details</p>
+          <div class="wave gsap-reveal-hero">
+            <svg>
+              <path d="M10,10 L50,100 L90,50" stroke="#0389ff"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <form id="service-request-form" class="form-section">
+            <div class="form-group mb-4">
+              <label class="mb-3">Select Services:</label>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="checkbox" id="ui_ux" name="services" value="ui_ux" class="service-checkbox">
+                  <label for="ui_ux" class="service-label">
+                    <i class="icon-pencil service-icon"></i>
+                    UI/UX Design
+                  </label>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="checkbox" id="web_design" name="services" value="web_design" class="service-checkbox">
+                  <label for="web_design" class="service-label">
+                    <i class="icon-monitor service-icon"></i>
+                    Web Design
+                  </label>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="checkbox" id="software_dev" name="services" value="software_dev" class="service-checkbox">
+                  <label for="software_dev" class="service-label">
+                    <i class="icon-code service-icon"></i>
+                    Software Development
+                  </label>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input type="checkbox" id="user_research" name="services" value="user_research" class="service-checkbox">
+                  <label for="user_research" class="service-label">
+                    <i class="icon-search service-icon"></i>
+                    User Research and Testing
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="project-description">Project Description:</label>
+              <textarea class="form-control" id="project-description" rows="4" required></textarea>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="budget">Estimated Budget:</label>
+                  <select class="form-control" id="budget" required>
+                    <option value="">Select a range</option>
+                    <option value="0-1000">$0 - $1,000</option>
+                    <option value="1000-5000">$1,000 - $5,000</option>
+                    <option value="5000-10000">$5,000 - $10,000</option>
+                    <option value="10000+">$10,000+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="timeline">Desired Timeline:</label>
+                  <input type="date" class="form-control" id="timeline" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="name">Your Name:</label>
+                  <input type="text" class="form-control" id="name" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="email">Your Email:</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-submit">Submit Request</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include your existing footer and scripts here -->
+  
+  <script>
+    document.getElementById('service-request-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Here you would typically send the form data to your API
+      console.log('Form submitted. In a real application, this data would be sent to an API.');
+      // You can add code here to collect the form data and send it to your API
+    });
+  </script>
+</body>
+</html>
