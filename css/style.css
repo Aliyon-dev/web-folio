@@ -109,6 +109,37 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       background: #0a0a0a;
       border-color: #0a0a0a; }
 
+      .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: black;
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        transition: transform 0.1s;
+    }
+
+    .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 2px solid black;
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        transition: transform 0.2s;
+    }
+
+    .cursor-outline_1 {
+      width: 40px;
+      height: 40px;
+      border: 2px solid black;
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: transform 0.2s;
+  }
+
+
 .form-control, .custom-select {
   border: none;
   font-size: 16px;
